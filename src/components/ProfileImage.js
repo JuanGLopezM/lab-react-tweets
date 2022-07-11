@@ -2,7 +2,7 @@ import React from "react";
 
 function ProfileImage(props) {
   return (
-    <div className="tweet">
+    <div className="profile">
       <img src={props.image} className="profile" alt="profile" />
     </div>
   );
