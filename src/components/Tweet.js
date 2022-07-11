@@ -2,6 +2,8 @@
 import userEvent from "@testing-library/user-event";
 import ProfileImage from "./ProfileImage";
 import User from "./User";
+import Timestamp from "./Timestamp";
+import Message from "./Message";
 
 function Tweet(props) {
   // const {user, timestamp, message} = tweet
@@ -14,23 +16,25 @@ function Tweet(props) {
         alt="profile"
       /> */}
       <ProfileImage image={props.tweet.user.image} />
-      
+   
       <div className="body">
+  
         <div className="top">
-          
         <User userData={props.tweet.user} />
+        
           {/* <span className="user">
             <span className="name">{props.tweet.user.name}</span>
             <span className="handle">{props.tweet.handle}</span>
           </span> */}
-
-          <span className="timestamp">{props.tweet.timestamp}</span>
-          {/* <Timestamp time={props.tweet.timestamp} /> */}
+          <Timestamp time={props.tweet.timestamp} />
+          {/* <span className="timestamp">{props.tweet.timestamp}</span> */}
+          
         </div>
+        <Message message={props.tweet.message} />
 
-        <p className="message">
+        {/* <p className="message">
           {props.tweet.message}
-        </p>
+        </p> */}
 
         <div className="actions">
           {/* Font Awesome icons */}
